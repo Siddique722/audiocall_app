@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "C:\\Users\\KANZ INSTALLMENT\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\agora_rtc_engine-6.5.2\\android\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\KANZ INSTALLMENT\\AppData\\Local\\Android\\sdk\\cmake\\3.18.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\Users\\KANZ INSTALLMENT\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\agora_rtc_engine-6.5.2\\android\\.cxx\\Debug\\i293w1q8\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\KANZ INSTALLMENT\\AppData\\Local\\Android\\sdk\\cmake\\3.18.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\Users\\KANZ INSTALLMENT\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\agora_rtc_engine-6.5.2\\android\\.cxx\\Debug\\i293w1q8\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "iris_rendering_android::@6890427a1f51a3e7e1df": {
+      "artifactName": "iris_rendering_android",
+      "abi": "x86",
+      "output": "C:\\agora\\build\\agora_rtc_engine\\intermediates\\cxx\\Debug\\i293w1q8\\obj\\x86\\libiris_rendering_android.so",
+      "runtimeFiles": []
+    }
+  }
+}

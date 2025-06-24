@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="C:\Users\KANZ INSTALLMENT\AppData\Local\Pub\Cache\hosted\pub.dev\agora_rtc_engine-6.5.2\android"
+    name=":agora_rtc_engine"
+    type="LIBRARY"
+    maven="io.agora.agora_rtc_ng:agora_rtc_engine:"
+    gradle="7.3.0"
+    buildFolder="C:\agora\build\agora_rtc_engine"
+    bootClassPath="C:\Users\KANZ INSTALLMENT\AppData\Local\Android\sdk\platforms\android-31\android.jar;C:\Users\KANZ INSTALLMENT\AppData\Local\Android\sdk\build-tools\30.0.3\core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-31"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="debug"/>
+</lint-module>
