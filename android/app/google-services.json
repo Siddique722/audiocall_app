@@ -1,0 +1,134 @@
+{
+  "project_info": {
+    "project_number": "622260458070",
+    "project_id": "el-talk",
+    "storage_bucket": "el-talk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622260458070:android:c8975b587b0625de9261f7",
+        "android_client_info": {
+          "package_name": "com.earnLanguage.el_talk_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "622260458070-752f44k010vib0n4a4g80t0ugujvmh08.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.earnLanguage.el_talk_flutter",
+            "certificate_hash": "fa2ddb0b88264687e7e0341ee29b78fed8020852"
+          }
+        },
+        {
+          "client_id": "622260458070-ts967f6u0pl34q4qjh6n5dq3if5h5n29.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.earnLanguage.el_talk_flutter",
+            "certificate_hash": "ae14ed9cb061a68bcd4fdf2050f2b5b64c623540"
+          }
+        },
+        {
+          "client_id": "622260458070-coep9dk6hjn7ta8e16df0apnant0esks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWkYLbVthEoWvT3IqMMM6Jj3321YQ4wbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "622260458070-coep9dk6hjn7ta8e16df0apnant0esks.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "622260458070-7fphf3kel4888a1otmn5m6lkf3s4m7ik.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.eltalkflutter.elTalkFlutter"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622260458070:android:705e943f08b7ac6a9261f7",
+        "android_client_info": {
+          "package_name": "com.example.admin_dashboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "622260458070-coep9dk6hjn7ta8e16df0apnant0esks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWkYLbVthEoWvT3IqMMM6Jj3321YQ4wbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "622260458070-coep9dk6hjn7ta8e16df0apnant0esks.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "622260458070-7fphf3kel4888a1otmn5m6lkf3s4m7ik.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.eltalkflutter.elTalkFlutter"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622260458070:android:ca373d035fced38b9261f7",
+        "android_client_info": {
+          "package_name": "com.example.agora"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "622260458070-coep9dk6hjn7ta8e16df0apnant0esks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWkYLbVthEoWvT3IqMMM6Jj3321YQ4wbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "622260458070-coep9dk6hjn7ta8e16df0apnant0esks.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "622260458070-7fphf3kel4888a1otmn5m6lkf3s4m7ik.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.eltalkflutter.elTalkFlutter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
