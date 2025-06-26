@@ -1,3 +1,0 @@
-ninja: Entering directory `C:\Users\KANZ INSTALLMENT\AppData\Local\Pub\Cache\hosted\pub.dev\agora_rtc_engine-6.5.2\android\.cxx\RelWithDebInfo\3g3v6e5m\x86'
-[1/2] Building CXX object CMakeFiles/iris_rendering_android.dir/iris_rtc_rendering_android.cc.o
-[2/2] Linking CXX shared library C:\agora\build\agora_rtc_engine\intermediates\cxx\RelWithDebInfo\3g3v6e5m\obj\x86\libiris_rendering_android.so
