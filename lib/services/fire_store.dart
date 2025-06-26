@@ -45,11 +45,11 @@ class FirestoreService {
 
   Future<void> saveUserFromApi(Map<String, dynamic> user, String token) async {
     final userData = {
-      'id': user['id'], // standardized
+      'id': user['id'],
       'name': user['name'],
       'email': user['email'],
-      'fcm_token': user['fcm_token'], // standardized
-      'auth_token': token, // standardized to 'auth_token'
+      'fcm_token': user['fcm_token'],
+      'auth_token': token,
       'role': user['role'],
       'created_at': user['created_at'],
       'updated_at': user['updated_at'],
@@ -57,10 +57,13 @@ class FirestoreService {
       'email_verification_code': user['email_verification_code'],
       'email_verification_expires_at': user['email_verification_expires_at'],
     };
+    print('[FIRESTORE] Saving user to Firestore with fields:');
+    userData.forEach((k, v) => print('  $k: $v'));
     await _firestore
         .collection('users')
         .doc(user['id'].toString())
         .set(userData);
+    print('[FIRESTORE] User saved in Firestore.');
   }
 
   Future<void> saveUser(UserModel user) async {
@@ -69,6 +72,8 @@ class FirestoreService {
 
   Future<UserModel?> getUser(String id) async {
     DocumentSnapshot doc = await _firestore.collection('users').doc(id).get();
+    print('[FIRESTORE] Raw user document for id=$id:');
+    print(doc.data());
     if (doc.exists) {
       return UserModel.fromMap(doc.data() as Map<String, dynamic>);
     }

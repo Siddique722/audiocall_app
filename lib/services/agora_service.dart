@@ -2,7 +2,6 @@ import 'package:agora/contabts/constants.dart';
 import 'package:agora/services/auth_services.dart';
 import 'package:agora_rtc_engine/agora_rtc_engine.dart';
 import 'package:http/http.dart' as http;
-import 'dart:developer' show log;
 import 'dart:convert';
 
 class AgoraService {
@@ -106,6 +105,24 @@ class AgoraService {
         },
       ),
     );
+  }
+
+  /// Mutes or unmutes the local audio stream
+  Future<void> muteLocalAudioStream(bool mute) async {
+    try {
+      await _engine?.muteLocalAudioStream(mute);
+    } catch (e) {
+      print('Error muting local audio stream: $e');
+    }
+  }
+
+  /// Enables or disables the speakerphone
+  Future<void> setEnableSpeakerphone(bool enable) async {
+    try {
+      await _engine?.setEnableSpeakerphone(enable);
+    } catch (e) {
+      print('Error setting speakerphone: $e');
+    }
   }
 
   /// Disposes the Agora engine

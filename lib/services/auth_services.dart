@@ -190,6 +190,8 @@ class AuthService {
         }),
       );
       final data = jsonDecode(response.body);
+      print('[LOGIN] Backend response:');
+      print(data);
       if (data['status'] == 'success') {
         _token = data['token'];
         String id = data['user']['id'].toString();
@@ -197,9 +199,14 @@ class AuthService {
         // Always use local FCM token for Firestore
         final userMap = Map<String, dynamic>.from(data['user']);
         userMap['fcm_token'] = fcmToken;
+        print('[LOGIN] User map to save in Firestore:');
+        userMap.forEach((k, v) => print('  $k: $v'));
         await _firestoreService.saveUserFromApi(userMap, _token!);
+        print('[LOGIN] Saved user in Firestore.');
         await saveUserToPrefs(
             id, _token!, fcmToken); // Always use local fcmToken
+        print(
+            '[LOGIN] Saved user in SharedPreferences: id=$id, auth_token=$_token, fcm_token=$fcmToken');
         return true;
       } else {
         throw Exception(data['message'] ?? 'Login failed');
@@ -227,6 +234,8 @@ class AuthService {
         }),
       );
       final data = jsonDecode(response.body);
+      print('[SIGNUP] Backend response:');
+      print(data);
       if (data['status'] == 'success') {
         _token = data['token'];
         String id = data['user']['id'].toString();
@@ -234,15 +243,14 @@ class AuthService {
         // Always use local FCM token for Firestore
         final userMap = Map<String, dynamic>.from(data['user']);
         userMap['fcm_token'] = fcmToken;
-        print('1111111111111111111111111111:-User data: \\${userMap}');
-        print('1111111111111111111111111111:-FCM Token: $fcmToken');
-        print('1111111111111111111111111111:-Token: \\${data['token']}');
-        print('1111111111111111111111111111:-ID: $id');
-
+        print('[SIGNUP] User map to save in Firestore:');
+        userMap.forEach((k, v) => print('  $k: $v'));
         await _firestoreService.saveUserFromApi(userMap, _token!);
+        print('[SIGNUP] Saved user in Firestore.');
         await saveUserToPrefs(
             id, _token!, fcmToken); // Always use local fcmToken
-        print('---========------=-=-=-=-=-=-=-=-=-=-=-FCM TOKEN=$fcmToken');
+        print(
+            '[SIGNUP] Saved user in SharedPreferences: id=$id, auth_token=$_token, fcm_token=$fcmToken');
         return true;
       } else {
         throw Exception(data['message'] ?? 'Signup failed');

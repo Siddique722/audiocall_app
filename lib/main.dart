@@ -104,6 +104,7 @@
 // // }
 
 import 'package:agora/model/call_model.dart';
+import 'package:agora/screens/incoming_call_screen.dart';
 import 'package:agora/screens/login_screen/login_screen.dart';
 import 'package:agora/screens/login_screen/signup_screen.dart';
 import 'package:agora/services/auth_services.dart';
@@ -160,6 +161,26 @@ class MyApp extends StatelessWidget {
                 return CallScreen(
                   call: args['call'] as CallModel,
                   channelName: args['channelName'] as String,
+                );
+              },
+            ),
+            GetPage(
+              name: '/incoming_call',
+              page: () {
+                final args = Get.arguments as Map<String, dynamic>?;
+                print('[ROUTE] /incoming_call args: $args');
+                if (args == null ||
+                    args['callerName'] == null ||
+                    args['onAccept'] == null ||
+                    args['onDecline'] == null) {
+                  Get.snackbar('Error', 'Invalid incoming call parameters');
+                  return HomeScreen();
+                }
+                return IncomingCallScreen(
+                  callerName: args['callerName'] as String,
+                  onAccept: args['onAccept'] as VoidCallback,
+                  onDecline: args['onDecline'] as VoidCallback,
+                  errorMessage: args['errorMessage'] as String?,
                 );
               },
             ),

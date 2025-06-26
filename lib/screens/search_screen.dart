@@ -74,7 +74,8 @@ class _SearchScreenState extends State<SearchScreen> {
 
   void initiateCall(UserModel receiver) async {
     // Debug log: receiver object
-    print('[DEBUG] initiateCall called with receiver: \n${receiver.toMap()}');
+    print('[DEBUG] initiateCall called with receiver:');
+    receiver.toMap().forEach((k, v) => print('  $k: $v'));
 
     // Validate receiver ID and name (only check for empty)
     if (receiver.id.isEmpty) {
@@ -96,8 +97,10 @@ class _SearchScreenState extends State<SearchScreen> {
     final callerName = AuthService().currentUser?['name'] ?? '';
     final fcmToken =
         await AuthService().getFcmToken(); // standardized to 'fcm_token'
-    print(
-        '[DEBUG] Caller ID: $callerId, Caller Name: $callerName, FCM Token: $fcmToken');
+    print('[DEBUG] Caller info:');
+    print('  id: $callerId');
+    print('  name: $callerName');
+    print('  fcm_token: $fcmToken');
 
     if (callerId == null || callerId.isEmpty) {
       print('[ERROR] Caller ID is missing.');
@@ -134,7 +137,8 @@ class _SearchScreenState extends State<SearchScreen> {
       receiverName: receiver.name,
       hasDialled: true,
     );
-    print('[DEBUG] CallModel created: ${call.toMap()}');
+    print('[DEBUG] CallModel created:');
+    call.toMap().forEach((k, v) => print('  $k: $v'));
 
     try {
       // Check if receiver has FCM token
@@ -147,8 +151,8 @@ class _SearchScreenState extends State<SearchScreen> {
             backgroundColor: Colors.white, colorText: Colors.red);
         return;
       }
-      print(
-          '[DEBUG] Receiver Firestore user document: ${receiverUser.toMap()}');
+      print('[DEBUG] Receiver Firestore user document:');
+      receiverUser.toMap().forEach((k, v) => print('  $k: $v'));
       final receiverFcmToken =
           receiverUser.toMap()['fcm_token']; // standardized to 'fcm_token'
       print('[DEBUG] Receiver FCM token: $receiverFcmToken');
